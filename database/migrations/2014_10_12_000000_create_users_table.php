@@ -48,10 +48,10 @@ class CreateUsersTable extends Migration
             $table->string('city');
             $table->text('bio');
             $table->string('photo');
-            $table->string('identitydocument');
+            $table->string('identity_document');
             $table->tinyInteger('is_company');
-            $table->tinyInteger('is_email_verified');
-            $table->tinyInteger('is_active');
+            $table->tinyInteger('is_email_verified')->default('0');
+            $table->tinyInteger('is_active')->default('1');
             $table->timestamps();
         });
     }
