@@ -40,10 +40,33 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'subadmin' => [
+            'driver' => 'session',
+            'provider' => 'subadmins',
+        ],
+        'institute' => [
+            'driver' => 'session',
+            'provider' => 'institutes',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+        ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+        ],
+        'subadmin-api' => [
+            'driver' => 'token',
+            'provider' => 'subadmins',
+        ],
+        'institute-api' => [
+            'driver' => 'token',
+            'provider' => 'institutes',
         ],
     ],
 
@@ -68,6 +91,18 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
+        'subadmins' => [
+            'driver' => 'eloquent',
+            'model' => App\Subadmin::class,
+        ],
+        'institutes' => [
+            'driver' => 'eloquent',
+            'model' => App\Institute::class,
         ],
 
         // 'users' => [
@@ -94,6 +129,21 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'subadmins' => [
+            'provider' => 'subadmins',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'institutes' => [
+            'provider' => 'institutes',
             'table' => 'password_resets',
             'expire' => 60,
         ],

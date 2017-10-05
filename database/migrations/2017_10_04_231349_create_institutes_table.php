@@ -34,7 +34,6 @@ class CreateInstitutesTable extends Migration
             $table->increments('id');
             $table->string('email')->unique();
             $table->string('password');
-            $table->rememberToken();
             $table->string('partner_institute_name');
             $table->string('partner_institute_id');
             $table->string('first_name');

@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Subadmin extends Authenticatable
 {
     use Notifiable;
+    protected $guard = 'subadmin';
 
     /**
      * The attributes that are mass assignable.

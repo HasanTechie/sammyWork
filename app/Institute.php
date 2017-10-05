@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Institute extends Authenticatable
 {
     use Notifiable;
+    protected $guard = 'institute';
 
     /**
      * The attributes that are mass assignable.
