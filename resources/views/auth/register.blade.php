@@ -60,19 +60,34 @@
                                     </div>
                                 </div>
                             </div>
+                            @section ('js')
+                                Settings main page
 
-                            <script>
-                                //                                $('input[type=radio][name=is_company]').on('change', function() {
-                                //                                    switch($(this).val()) {
-                                //                                        case '0':
-                                //                                            $('#organization_div').hide();
-                                //                                            break;
-                                //                                        case '1':
-                                //                                            $('#organization_div').show();
-                                //                                            break;
-                                //                                    }
-                                //                                });
-                            </script>
+                                <script type="text/javascript">
+                                    function myFunction()
+                                    {
+                                        alert("I am an alert box!")
+                                    }
+
+                                    $(document).ready(function()
+                                    {
+                                        myFunction();
+                                    )};
+                                </script>
+
+                            @endsection
+
+                                {{--@section('js')--}}
+                                    {{--$('input[type=radio][name=is_company]').on('change', function() {--}}
+                                        {{--switch($(this).val()) {--}}
+                                            {{--case '0':--}}
+                                                {{--$('#organization_div').hide();--}}
+                                                {{--break;--}}
+                                            {{--case '1':--}}
+                                                {{--$('#organization_div').show();--}}
+                                                {{--break;--}}
+                                        {{--}--}}
+                                    {{--});--}}
 
                             <div class="form-group{{ $errors->has('organization_name') ? ' has-error' : '' }}"
                                  id="organization_div">
